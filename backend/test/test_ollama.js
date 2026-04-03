@@ -1,4 +1,4 @@
-import { analyzeFilesAI, checkModelStatus, parseAOResponse } from '../backend/ollama_utils.js';
+import { analyzeFilesAI, checkModelStatus, parseAOResponse } from '../ollama_utils.js';
 import axios from 'axios';
 
 console.log('--- Commencing Ollama Utils Test Suite ---');

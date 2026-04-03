@@ -3,13 +3,16 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
-import { execSync } from 'child_process';
+import { execFile } from 'child_process';
+import { promisify } from 'util';
 import { analyzeFilesAI, checkModelStatus } from './ollama_utils.js';
 import { findSaveFolders, syncLocalFolder } from './local_scanner.js';
 
+const execFileAsync = promisify(execFile);
+
 const app = express();
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 
 // Persistent storage directories mapped into Docker
 const DATA_DIR = path.join(process.cwd(), 'data');
@@ -20,62 +23,69 @@ const DB_PATH = path.join(DATA_DIR, 'db.json');
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 if (!fs.existsSync(SAVES_DIR)) fs.mkdirSync(SAVES_DIR, { recursive: true });
 
-// Setup DB
-if (!fs.existsSync(DB_PATH)) {
-    fs.writeFileSync(DB_PATH, JSON.stringify({ 
-        games: [],
-        settings: {
-            maxVersions: 10,
-            steamGridApiKey: '',
-            ollamaEndpoint: 'http://ollama:11434',
-            ollamaModel: 'phi4-mini:latest'
-        }
-    }));
-} else {
-    const db = JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
-    let changed = false;
-    if (!db.settings) {
-        db.settings = { 
-            maxVersions: 10, 
-            steamGridApiKey: '',
-            ollamaEndpoint: 'http://ollama:11434',
-            ollamaModel: 'phi4-mini:latest'
-        };
-        changed = true;
-    }
-    if (db.settings.ollamaEndpoint === undefined) {
-        db.settings.ollamaEndpoint = 'http://ollama:11434';
-        changed = true;
-    }
-    if (db.settings.ollamaModel === undefined) {
-        db.settings.ollamaModel = 'phi4-mini:latest';
-        changed = true;
-    }
-    if (db.settings.localSources === undefined) {
-        db.settings.localSources = [];
-        changed = true;
-    }
-    if (db.settings.localSources === undefined) {
-        db.settings.localSources = [];
-        changed = true;
-    }
-    if (changed) fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2));
-}
+// ─── In-Memory DB Cache ───────────────────────────────────────────────────────
+// Reading db.json from disk on every API request is wasteful.
+// We cache the parsed object and invalidate it on every write.
+let _dbCache = null;
 
 function getDB() {
-    return JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
+    if (_dbCache) return _dbCache;
+    _dbCache = JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
+    return _dbCache;
 }
 
 function saveDB(data) {
+    _dbCache = data; // update cache first
     const tmpPath = DB_PATH + '.tmp';
     try {
         fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2));
         fs.renameSync(tmpPath, DB_PATH);
     } catch (e) {
         console.error('Failed to save DB atomically:', e);
-        // Fallback to direct write if rename fails
         fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
     }
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Setup DB — only runs once at startup, populates missing fields
+if (!fs.existsSync(DB_PATH)) {
+    saveDB({
+        games: [],
+        settings: {
+            maxVersions: 10,
+            steamGridApiKey: '',
+            ollamaEndpoint: 'http://ollama:11434',
+            ollamaModel: 'phi4-mini:latest',
+            localSources: []
+        }
+    });
+} else {
+    const db = getDB();
+    let changed = false;
+
+    if (!db.settings) {
+        db.settings = {
+            maxVersions: 10,
+            steamGridApiKey: '',
+            ollamaEndpoint: 'http://ollama:11434',
+            ollamaModel: 'phi4-mini:latest',
+            localSources: []
+        };
+        changed = true;
+    }
+    // Patch individual missing fields
+    const defaults = {
+        ollamaEndpoint: 'http://ollama:11434',
+        ollamaModel: 'phi4-mini:latest',
+        localSources: []
+    };
+    for (const [key, val] of Object.entries(defaults)) {
+        if (db.settings[key] === undefined) {
+            db.settings[key] = val;
+            changed = true;
+        }
+    }
+    if (changed) saveDB(db);
 }
 
 function getFileCategory(filePath) {
@@ -117,11 +127,11 @@ app.post('/api/upload-file', (req, res) => {
     try {
         const game = req.headers['x-game'];
         const filePath = req.headers['x-path'];
-        
+
         if (!game || !filePath) return res.status(400).json({ success: false, message: 'Game and path headers required.' });
 
         const gameName = path.basename(game.toString());
-        const safePath = filePath.toString().replace(/\.\.[\\\/]/g, '');
+        const safePath = filePath.toString().replace(/\.\.[\\/]/g, '');
         const gameRoot = path.join(SAVES_DIR, gameName);
         const finalPath = path.join(gameRoot, safePath);
         const finalDir = path.dirname(finalPath);
@@ -133,7 +143,7 @@ app.post('/api/upload-file', (req, res) => {
             const syncId = req.headers['x-sync-id'] || fs.statSync(finalPath).mtime.getTime().toString();
             const versionDir = path.join(gameRoot, '.versions', syncId);
             const archivePath = path.join(versionDir, safePath);
-            
+
             if (!fs.existsSync(path.dirname(archivePath))) {
                 fs.mkdirSync(path.dirname(archivePath), { recursive: true });
             }
@@ -144,8 +154,8 @@ app.post('/api/upload-file', (req, res) => {
             const maxVersions = db.settings?.maxVersions || 10;
             const versionsRoot = path.join(gameRoot, '.versions');
             const versions = fs.readdirSync(versionsRoot)
-                .filter(v => !isNaN(Number(v))) // Only count numeric version folders
-                .sort((a,b) => Number(b) - Number(a)); 
+                .filter(v => !isNaN(Number(v)))
+                .sort((a, b) => Number(b) - Number(a));
 
             if (versions.length > maxVersions) {
                 versions.slice(maxVersions).forEach(v => {
@@ -162,26 +172,25 @@ app.post('/api/upload-file', (req, res) => {
             res.status(500).json({ success: false, message: 'Stream error: ' + err.message });
         });
 
-        writer.on('finish', () => {
+        writer.on('finish', async () => {
             const db = getDB();
-            const timestampStr = new Date().toLocaleString();
+            // Use ISO timestamp for consistent, sortable date storage
+            const timestampStr = new Date().toISOString();
             const gameEntry = db.games.find(g => g.name.toLowerCase() === gameName.toLowerCase());
-            
+
             // AUTOMATIC EXTRACTION: If we uploaded a saves.zip, extract it immediately
             if (safePath === 'saves.zip') {
                 try {
                     const tempExtractDir = path.join(gameRoot, '_extract_tmp');
                     if (fs.existsSync(tempExtractDir)) fs.rmSync(tempExtractDir, { recursive: true });
                     fs.mkdirSync(tempExtractDir, { recursive: true });
-                    
-                    // Unzip into temp dir
-                    execSync(`unzip -o "${finalPath}" -d "${tempExtractDir}"`);
-                    
-                    // Move files to game root (overwriting and triggering versioning if needed)
-                    // Note: Simplified logic for now, could be more granular
-                    execSync(`cp -rv "${tempExtractDir}"/* "${gameRoot}/"`);
+
+                    // Use execFile safely without shell interpretation to completely prevent Command Injection vulnerabilities via x-game / filename
+                    await execFileAsync('unzip', ['-o', finalPath, '-d', tempExtractDir]);
+                    await fs.promises.cp(tempExtractDir, gameRoot, { recursive: true });
+
                     fs.rmSync(tempExtractDir, { recursive: true });
-                    fs.unlinkSync(finalPath); // Remove the zip itself to keep clean
+                    fs.unlinkSync(finalPath); // Remove zip after extraction
                 } catch (err) {
                     console.error('Failed to extract saves.zip:', err.message);
                 }
@@ -233,53 +242,52 @@ app.post('/api/update-thumbnail', (req, res) => {
 
 // API: List versions for a game
 app.get('/api/versions', (req, res) => {
-  try {
-    const { game } = req.query;
-    if (!game) return res.status(400).json({ success: false });
-    const gameName = path.basename(game.toString());
-    const versionsRoot = path.join(SAVES_DIR, gameName, '.versions');
-    if (!fs.existsSync(versionsRoot)) return res.json({ success: true, versions: [] });
+    try {
+        const { game } = req.query;
+        if (!game) return res.status(400).json({ success: false });
+        const gameName = path.basename(game.toString());
+        const versionsRoot = path.join(SAVES_DIR, gameName, '.versions');
+        if (!fs.existsSync(versionsRoot)) return res.json({ success: true, versions: [] });
 
-    const folders = fs.readdirSync(versionsRoot).filter(f => !isNaN(Number(f)));
-    const versions = folders.map(f => {
-        return {
+        const folders = fs.readdirSync(versionsRoot).filter(f => !isNaN(Number(f)));
+        const versions = folders.map(f => ({
             id: f,
-            timestamp: new Date(parseInt(f)).toLocaleString()
-        }
-    }).sort((a,b) => parseInt(b.id) - parseInt(a.id));
-    res.json({ success: true, versions });
-  } catch(e) {
-      res.status(500).json({ success: false });
-  }
+            timestamp: new Date(parseInt(f)).toISOString()
+        })).sort((a, b) => parseInt(b.id) - parseInt(a.id));
+
+        res.json({ success: true, versions });
+    } catch (e) {
+        res.status(500).json({ success: false });
+    }
 });
 
 // API: List files in a specific version
 app.get('/api/version-files', (req, res) => {
     try {
-      const { game, versionId } = req.query;
-      if (!game || !versionId) return res.status(400).json({ success: false });
-      const gameName = path.basename(game.toString());
-      const versionDir = path.join(SAVES_DIR, gameName, '.versions', versionId.toString());
-      if (!fs.existsSync(versionDir)) return res.json({ success: true, files: [] });
-  
-      const files = [];
-      const walk = (dir) => {
-          const items = fs.readdirSync(dir);
-          for (const item of items) {
-              const fullPath = path.join(dir, item);
-              const lstats = fs.lstatSync(fullPath);
-              if (lstats.isSymbolicLink()) continue; // Skip symlinks
-              if (lstats.isDirectory()) {
-                  walk(fullPath);
-              } else {
-                  const rel = path.relative(versionDir, fullPath);
-                  const metadata = getFileMetadata(versionDir, rel);
-                  if (metadata) files.push(metadata);
-              }
-          }
-      };
-      walk(versionDir);
-      res.json({ success: true, files: files.filter(f => f !== null) });
+        const { game, versionId } = req.query;
+        if (!game || !versionId) return res.status(400).json({ success: false });
+        const gameName = path.basename(game.toString());
+        const versionDir = path.join(SAVES_DIR, gameName, '.versions', versionId.toString());
+        if (!fs.existsSync(versionDir)) return res.json({ success: true, files: [] });
+
+        const files = [];
+        const walk = (dir) => {
+            const items = fs.readdirSync(dir);
+            for (const item of items) {
+                const fullPath = path.join(dir, item);
+                const lstats = fs.lstatSync(fullPath);
+                if (lstats.isSymbolicLink()) continue;
+                if (lstats.isDirectory()) {
+                    walk(fullPath);
+                } else {
+                    const rel = path.relative(versionDir, fullPath);
+                    const metadata = getFileMetadata(versionDir, rel);
+                    if (metadata) files.push(metadata);
+                }
+            }
+        };
+        walk(versionDir);
+        res.json({ success: true, files: files.filter(f => f !== null) });
     } catch (e) {
         res.status(500).json({ success: false, message: e.message });
     }
@@ -292,7 +300,7 @@ app.get('/api/download-version-file', (req, res) => {
         if (!game || !versionId || !filePath) return res.status(400).json({ success: false });
 
         const versionRoot = path.join(SAVES_DIR, game.toString(), '.versions', versionId.toString());
-        const safePath = filePath.toString().replace(/\.\.[\\\/]/g, '');
+        const safePath = filePath.toString().replace(/\.\.[\\/]/g, '');
         const fullPath = path.join(versionRoot, safePath);
 
         if (!fs.existsSync(fullPath)) return res.status(404).json({ success: false, message: 'Version file not found.' });
@@ -327,9 +335,9 @@ app.get('/api/list-files', (req, res) => {
             const items = fs.readdirSync(dir);
             for (const item of items) {
                 const fullPath = path.join(dir, item);
-                if (item === '.versions') continue; // Skip versions folder in main list
+                if (item === '.versions') continue;
                 const lstats = fs.lstatSync(fullPath);
-                if (lstats.isSymbolicLink()) continue; // Skip symlinks to avoid infinite loops
+                if (lstats.isSymbolicLink()) continue;
                 if (lstats.isDirectory()) {
                     walk(fullPath);
                 } else {
@@ -358,11 +366,9 @@ app.post('/api/analyze-files-ai', async (req, res) => {
         const endpoint = db.settings?.ollamaEndpoint || 'http://ollama:11434';
         const model = db.settings?.ollamaModel || 'phi4-mini:latest';
 
-        // Perform analysis using the robust utility
         const result = await analyzeFilesAI(endpoint, model, gameName, files);
-        
+
         if (result.success) {
-            // PERSIST ANALYSIS: Save finding to DB
             const gameIdx = db.games.findIndex(g => g.name.toLowerCase() === gameName.toLowerCase());
             if (gameIdx !== -1) {
                 db.games[gameIdx].analysis = result.analysis;
@@ -384,7 +390,6 @@ app.get('/api/ollama-health', async (req, res) => {
         const db = getDB();
         const endpoint = db.settings?.ollamaEndpoint || 'http://ollama:11434';
         const model = db.settings?.ollamaModel || 'phi4-mini:latest';
-
         const result = await checkModelStatus(endpoint, model);
         res.json(result);
     } catch (e) {
@@ -404,18 +409,17 @@ app.post('/api/local-sync', async (req, res) => {
         for (const source of sources) {
             if (!fs.existsSync(source.path)) continue;
 
-            const gamesInSource = findSaveFolders(source.path, 1); // 1 depth for direct folders
+            const gamesInSource = findSaveFolders(source.path, 1);
             for (const gamePath of gamesInSource) {
                 const gameName = path.basename(gamePath);
                 const result = syncLocalFolder(gamePath, gameName, SAVES_DIR, maxVersions);
-                
+
                 if (result.filesSynced > 0) {
                     totalFilesSynced += result.filesSynced;
                     syncedGames.push(gameName);
 
-                    // Update DB status for the game
                     const gEntry = db.games.find(g => g.name.toLowerCase() === gameName.toLowerCase());
-                    const ts = new Date().toLocaleString();
+                    const ts = new Date().toISOString();
                     if (gEntry) {
                         gEntry.status = 'In Sync';
                         gEntry.lastSync = ts;
@@ -456,7 +460,7 @@ app.post('/api/local-sources', (req, res) => {
         if (!sourcePath || !fs.existsSync(sourcePath)) {
             return res.status(400).json({ success: false, message: 'Valid path required.' });
         }
-        
+
         const db = getDB();
         if (!db.settings.localSources) db.settings.localSources = [];
         if (db.settings.localSources.some(s => s.path === sourcePath)) {
@@ -531,32 +535,29 @@ app.get('/api/search-art', async (req, res) => {
         const apiKey = db.settings?.steamGridApiKey;
         if (!apiKey) return res.status(401).json({ success: false, message: 'SteamGridDB API Key not configured.' });
 
-        // 1. Search for game ID
-        const searchRes = await axios.get(`https://www.steamgriddb.com/api/v2/search/autocomplete/${encodeURIComponent(query.toString())}`, {
-            headers: { 'Authorization': `Bearer ${apiKey}` },
-            timeout: 10000
-        });
+        const searchRes = await axios.get(
+            `https://www.steamgriddb.com/api/v2/search/autocomplete/${encodeURIComponent(query.toString())}`,
+            { headers: { 'Authorization': `Bearer ${apiKey}` }, timeout: 10000 }
+        );
 
         if (!searchRes.data.success || searchRes.data.data.length === 0) {
             return res.json({ success: true, results: [] });
         }
 
         const gameId = searchRes.data.data[0].id;
-
-        // 2. Get grids for that ID
-        const gridsRes = await axios.get(`https://www.steamgriddb.com/api/v2/grids/game/${gameId}`, {
-            headers: { 'Authorization': `Bearer ${apiKey}` },
-            timeout: 10000
-        });
+        const gridsRes = await axios.get(
+            `https://www.steamgriddb.com/api/v2/grids/game/${gameId}`,
+            { headers: { 'Authorization': `Bearer ${apiKey}` }, timeout: 10000 }
+        );
 
         const results = gridsRes.data.data.map(g => g.url);
         res.json({ success: true, results });
     } catch (e) {
         const errorDetail = e.response?.data?.errors?.[0] || e.response?.data?.message || e.message;
         console.warn('⚠️ SteamGridDB Proxy:', errorDetail);
-        
+
         if (e.response?.status === 401) {
-            return res.status(401).json({ success: false, message: 'Invalid SteamGridDB API Key. Please check your settings.' });
+            return res.status(401).json({ success: false, message: 'Invalid SteamGridDB API Key.' });
         }
         res.status(500).json({ success: false, message: 'Error searching SteamGridDB. Ensure your API key is correct.' });
     }
@@ -571,29 +572,25 @@ app.get('/api/auto-match-all', async (req, res) => {
 
         let matched = 0;
         for (const game of db.games) {
-            // Already has thumbnail? Skip or retry? Let's skip existing.
             if (game.thumbnail) continue;
-
             try {
-                // 1. Autocomplete Search
-                const s = await axios.get(`https://www.steamgriddb.com/api/v2/search/autocomplete/${encodeURIComponent(game.name)}`, {
-                    headers: { 'Authorization': `Bearer ${apiKey}` },
-                    timeout: 10000
-                });
+                const s = await axios.get(
+                    `https://www.steamgriddb.com/api/v2/search/autocomplete/${encodeURIComponent(game.name)}`,
+                    { headers: { 'Authorization': `Bearer ${apiKey}` }, timeout: 10000 }
+                );
                 if (s.data.success && s.data.data.length > 0) {
                     const gameId = s.data.data[0].id;
-                    // 2. Get Grids
-                    const g = await axios.get(`https://www.steamgriddb.com/api/v2/grids/game/${gameId}`, {
-                        headers: { 'Authorization': `Bearer ${apiKey}` },
-                        timeout: 10000
-                    });
+                    const g = await axios.get(
+                        `https://www.steamgriddb.com/api/v2/grids/game/${gameId}`,
+                        { headers: { 'Authorization': `Bearer ${apiKey}` }, timeout: 10000 }
+                    );
                     if (g.data.success && g.data.data.length > 0) {
                         game.thumbnail = g.data.data[0].url;
                         matched++;
                     }
                 }
-                // Rate limit spacing: 300ms for safety
-                await new Promise(r => setTimeout(r, 300)); 
+                // Rate-limit spacing
+                await new Promise(r => setTimeout(r, 300));
             } catch (innerErr) {
                 console.error(`Bulk match failed for ${game.name}:`, innerErr.message);
             }
@@ -612,7 +609,7 @@ app.get('/api/download-file', (req, res) => {
         if (!game || !filePath) return res.status(400).json({ success: false, message: 'Game and path required.' });
 
         const gameName = path.basename(game.toString());
-        const safePath = filePath.toString().replace(/\.\.[\\\/]/g, '');
+        const safePath = filePath.toString().replace(/\.\.[\\/]/g, '');
         const fullPath = path.join(SAVES_DIR, gameName, safePath);
         if (!fs.existsSync(fullPath)) return res.status(404).json({ success: false, message: 'File not found.' });
 
@@ -628,26 +625,22 @@ app.delete('/api/games/:id', (req, res) => {
         const { id } = req.params;
         const db = getDB();
         const gameIdx = db.games.findIndex(g => g.id.toString() === id);
-        
+
         if (gameIdx === -1) return res.status(404).json({ success: false, message: 'Game not found' });
-        
+
         const gameName = db.games[gameIdx].name;
 
-        // PATH PROTECTION & ATOMICITY
         if (gameName.includes('..') || gameName.includes('/') || gameName.includes('\\')) {
             return res.status(400).json({ success: false, message: 'Invalid game path for deletion' });
         }
 
-        // Delete its folder on disk FIRST
         const gameRoot = path.join(SAVES_DIR, gameName);
         if (fs.existsSync(gameRoot)) {
             fs.rmSync(gameRoot, { recursive: true, force: true });
         }
 
-        // Update DB ONLY if folder is gone (or wasn't there)
         db.games.splice(gameIdx, 1);
         saveDB(db);
-
         res.json({ success: true, message: `Deleted ${gameName}` });
     } catch (e) {
         res.status(500).json({ success: false, message: e.message });
@@ -659,14 +652,12 @@ app.delete('/api/versions/:game/:versionId', (req, res) => {
     try {
         const { game, versionId } = req.params;
         const gameName = path.basename(game);
-        
-        // PATH PROTECTION
+
         if (versionId.includes('..') || versionId.includes('/') || versionId.includes('\\')) {
             return res.status(400).json({ success: false, message: 'Invalid version ID format' });
         }
 
         const versionDir = path.join(SAVES_DIR, gameName, '.versions', versionId);
-        
         if (fs.existsSync(versionDir)) {
             fs.rmSync(versionDir, { recursive: true, force: true });
             res.json({ success: true, message: 'Version purged' });
@@ -678,7 +669,7 @@ app.delete('/api/versions/:game/:versionId', (req, res) => {
     }
 });
 
-// API: Serve Web App (compiled Vite bundle)
+// Serve compiled Vite frontend
 const FRONTEND_DIR = path.join(process.cwd(), 'frontend', 'dist');
 if (fs.existsSync(FRONTEND_DIR)) {
     app.use(express.static(FRONTEND_DIR));

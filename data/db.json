@@ -1,0 +1,76 @@
+{
+  "games": [
+    {
+      "id": 1775217604078.0166,
+      "name": "Assassin's Creed Mirage",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:24 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/c101b3cd6b1831640ee21dcc88fcf278.jpg"
+    },
+    {
+      "id": 1775217604136.7527,
+      "name": "Baldur's Gate 3",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/f991a333ff3135192662c1142796d566.png"
+    },
+    {
+      "id": 1775217604655.7852,
+      "name": "Batman: The Telltale Series",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/55fecc00cb1bada1cdc53226f2a1661a.png"
+    },
+    {
+      "id": 1775217604695.8284,
+      "name": "High on Life 2",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/fd80d8ce22afa6421879f27e78a66f75.png"
+    },
+    {
+      "id": 1775217604695.9436,
+      "name": "Hollow Knight: Silksong",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/1a8b52ae89172d796cdfb292806c3a52.png"
+    },
+    {
+      "id": 1775217604696.621,
+      "name": "Cult of the Lamb",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/579d9775e40fd4b559f01d242961f45f.png",
+      "analysis": {}
+    },
+    {
+      "id": 1775217604701.6038,
+      "name": "Kill Knight",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/7d8da8c5f0cece7a5c09b639dea48c07.png"
+    },
+    {
+      "id": 1775217604711.5315,
+      "name": "Nine Sols",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/06f8e8dfae959a8a5fc2dc9c7b1c434c.png",
+      "analysis": {}
+    },
+    {
+      "id": 1775217604715.4773,
+      "name": "The Expanse: A Telltale Series",
+      "status": "In Sync",
+      "lastSync": "4/3/2026, 12:13:25 PM",
+      "thumbnail": "https://cdn2.steamgriddb.com/grid/9ad03056b159059f958c30c54150764a.png"
+    }
+  ],
+  "settings": {
+    "maxVersions": 10,
+    "steamGridApiKey": "e7e3422b77ddcef776b68c94d04cbf3b",
+    "ollamaEndpoint": "http://100.71.46.98:11434",
+    "ollamaModel": "qwen3.5:0.8b",
+    "localSources": []
+  }
+}

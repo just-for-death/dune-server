@@ -1,0 +1,9 @@
+services:
+  dune-server:
+    build: .
+    container_name: dune-server
+    restart: unless-stopped
+    ports:
+      - "3023:3030"
+    volumes:
+      - ./data:/app/backend/data

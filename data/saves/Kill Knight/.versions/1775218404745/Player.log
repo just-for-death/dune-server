@@ -1,0 +1,1542 @@
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Loading player data from S:/Games/KILLKNIGHT/KILL KNIGHT_Data/data.unity3d
+Initialize engine version: 2022.3.31f1 (4ede2d13e8b4)
+[Subsystems] Discovering subsystems at path S:/Games/KILLKNIGHT/KILL KNIGHT_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   NVIDIA
+    VRAM:     4064 MB
+    Driver:   35.0.99999.9999
+<RI> Initializing input.
+New input system (experimental) initialized
+Using Windows.Gaming.Input
+<RI> Initialized touch support.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+UnloadTime: 1.320000 ms
+ServiceSetup::RegisterServices - Time: 0
+[Services] Started Service Initialisation
+[Services] Service Completed (ActivityProgressService) - 1ms - CanTick: False
+Service Initialisation completed in 1ms
+Service PostServiceInit
+PostServiceInit completed
+Unloading 6 Unused Serialized files (Serialized files now loaded: 1)
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+UnloadTime: 1.563800 ms
+Bootstrap initialiser static cleanup - callbacks clearing
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 31663.
+Total: 24.487000 ms (FindLiveObjects: 3.639000 ms CreateObjectMapping: 1.778200 ms MarkObjects: 18.940600 ms  DeleteObjects: 0.127800 ms)
+
+Delayed FMOD bank load start
+Got list of all banks to load
+Controller disconnection manager start
+[Bootstrap] Starting
+[Bootstrap] Calling GatherInitialisableTypes()
+Added Phoenix.PFX.PFXFactory to _typesToInitialise
+Successfully Adding Phoenix.Enemies.LowQualityShadowInstancedRenderer to _typesToPostInit (_typesToPostInit.Count=1)
+Added Phoenix.Enemies.LowQualityShadowInstancedRenderer to _typesToInitialise
+Added Phoenix.Damage.ExplosionService to _typesToInitialise
+Added Phoenix.Damage.HitService to _typesToInitialise
+Added Phoenix.Projectiles.ProjectileFactory to _typesToInitialise
+Successfully Adding Phoenix.Projectiles.StandardProjectileService to _typesToPostInit (_typesToPostInit.Count=2)
+Added Phoenix.Projectiles.StandardProjectileService to _typesToInitialise
+Added Phoenix.Gameplay.AchievementsService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.BloodService to _typesToPostInit (_typesToPostInit.Count=3)
+Added Phoenix.Gameplay.BloodService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.AudioService to _typesToPostInit (_typesToPostInit.Count=4)
+Added Phoenix.Gameplay.AudioService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.BossVoiceService to _typesToPostInit (_typesToPostInit.Count=5)
+Added Phoenix.Gameplay.BossVoiceService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.MusicService to _typesToPostInit (_typesToPostInit.Count=6)
+Added Phoenix.Gameplay.MusicService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.BestiaryTrackingService to _typesToPostInit (_typesToPostInit.Count=7)
+Added Phoenix.Gameplay.BestiaryTrackingService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.CheckpointService to _typesToPostInit (_typesToPostInit.Count=8)
+Added Phoenix.Gameplay.CheckpointService to _typesToInitialise
+Added Phoenix.Gameplay.EnemyDamageCalculatorService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.CurrencyService to _typesToPostInit (_typesToPostInit.Count=9)
+Added Phoenix.Gameplay.CurrencyService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.EquipmentStorageService to _typesToPostInit (_typesToPostInit.Count=10)
+Added Phoenix.Gameplay.EquipmentStorageService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.EquipmentUnlockService to _typesToPostInit (_typesToPostInit.Count=11)
+Added Phoenix.Gameplay.EquipmentUnlockService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.LoadoutService to _typesToPostInit (_typesToPostInit.Count=12)
+Added Phoenix.Gameplay.LoadoutService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.ExecutionService to _typesToPostInit (_typesToPostInit.Count=13)
+Added Phoenix.Gameplay.ExecutionService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.FeelEventListenersService to _typesToPostInit (_typesToPostInit.Count=14)
+Added Phoenix.Gameplay.FeelEventListenersService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.GameStateFSM to _typesToPostInit (_typesToPostInit.Count=15)
+Added Phoenix.Gameplay.GameStateFSM to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.GoalsService to _typesToPostInit (_typesToPostInit.Count=16)
+Added Phoenix.Gameplay.GoalsService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.PlayerInputService to _typesToPostInit (_typesToPostInit.Count=17)
+Added Phoenix.Gameplay.PlayerInputService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.LayerCompletionService to _typesToPostInit (_typesToPostInit.Count=18)
+Added Phoenix.Gameplay.LayerCompletionService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.CinematicSequenceService to _typesToPostInit (_typesToPostInit.Count=19)
+Added Phoenix.Gameplay.CinematicSequenceService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.GlitchTransitionService to _typesToPostInit (_typesToPostInit.Count=20)
+Added Phoenix.Gameplay.GlitchTransitionService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.RoomService to _typesToPostInit (_typesToPostInit.Count=21)
+Added Phoenix.Gameplay.RoomService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.SceneLoaderService to _typesToPostInit (_typesToPostInit.Count=22)
+Added Phoenix.Gameplay.SceneLoaderService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.TeleportTransitionService to _typesToPostInit (_typesToPostInit.Count=23)
+Added Phoenix.Gameplay.TeleportTransitionService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.NewPlayerReminderService to _typesToPostInit (_typesToPostInit.Count=24)
+Added Phoenix.Gameplay.NewPlayerReminderService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.PauseService to _typesToPostInit (_typesToPostInit.Count=25)
+Added Phoenix.Gameplay.PauseService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.HapticsService to _typesToPostInit (_typesToPostInit.Count=26)
+Added Phoenix.Gameplay.HapticsService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.PickupDropperService to _typesToPostInit (_typesToPostInit.Count=27)
+Added Phoenix.Gameplay.PickupDropperService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.ActiveReloadService to _typesToPostInit (_typesToPostInit.Count=28)
+Added Phoenix.Gameplay.ActiveReloadService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.DashService to _typesToPostInit (_typesToPostInit.Count=29)
+Added Phoenix.Gameplay.DashService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.PlayerAmmoActionService to _typesToPostInit (_typesToPostInit.Count=30)
+Added Phoenix.Gameplay.PlayerAmmoActionService to _typesToInitialise
+Added Phoenix.Gameplay.DamageIndicatorService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.CarnageScoreService to _typesToPostInit (_typesToPostInit.Count=31)
+Added Phoenix.Gameplay.CarnageScoreService to _typesToInitialise
+Added Phoenix.Gameplay.FriendsService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.HyperDriveService to _typesToPostInit (_typesToPostInit.Count=32)
+Added Phoenix.Gameplay.HyperDriveService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.KillStreakService to _typesToPostInit (_typesToPostInit.Count=33)
+Added Phoenix.Gameplay.KillStreakService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.LeaderboardsService to _typesToPostInit (_typesToPostInit.Count=34)
+Added Phoenix.Gameplay.LeaderboardsService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.ScoreService to _typesToPostInit (_typesToPostInit.Count=35)
+Added Phoenix.Gameplay.ScoreService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.SpawnService to _typesToPostInit (_typesToPostInit.Count=36)
+Added Phoenix.Gameplay.SpawnService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.TimeService to _typesToPostInit (_typesToPostInit.Count=37)
+Added Phoenix.Gameplay.TimeService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.TutorialService to _typesToPostInit (_typesToPostInit.Count=38)
+Added Phoenix.Gameplay.TutorialService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.TutorialUnlockService to _typesToPostInit (_typesToPostInit.Count=39)
+Added Phoenix.Gameplay.TutorialUnlockService to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.WeeklyDescentService to _typesToPostInit (_typesToPostInit.Count=40)
+Added Phoenix.Gameplay.WeeklyDescentService to _typesToInitialise
+Successfully Adding Phoenix.UI.FrameRateService to _typesToPostInit (_typesToPostInit.Count=41)
+Added Phoenix.UI.FrameRateService to _typesToInitialise
+Successfully Adding Phoenix.UI.UIAudioService to _typesToPostInit (_typesToPostInit.Count=42)
+Added Phoenix.UI.UIAudioService to _typesToInitialise
+Successfully Adding Phoenix.UI.UIPanelService to _typesToPostInit (_typesToPostInit.Count=43)
+Added Phoenix.UI.UIPanelService to _typesToInitialise
+Successfully Adding Phoenix.Input.UIInputService to _typesToPostInit (_typesToPostInit.Count=44)
+Added Phoenix.Input.UIInputService to _typesToInitialise
+Added Phoenix.Utilities.AuthenticationService to _typesToInitialise
+Added Phoenix.Utilities.LoadingTrackingService to _typesToInitialise
+Successfully Adding Phoenix.Utilities.PoolManager to _typesToPostInit (_typesToPostInit.Count=45)
+Added Phoenix.Utilities.PoolManager to _typesToInitialise
+Successfully Adding Phoenix.Utilities.SettingsService to _typesToPostInit (_typesToPostInit.Count=46)
+Added Phoenix.Utilities.SettingsService to _typesToInitialise
+Added Phoenix.Utilities.UpdateManager to _typesToInitialise
+Successfully Adding Phoenix.Gameplay.Analytics.AnalyticsService to _typesToPostInit (_typesToPostInit.Count=47)
+Added Phoenix.Gameplay.Analytics.AnalyticsService to _typesToInitialise
+Added Phoenix.Gameplay.Analytics.SentryService to _typesToInitialise
+Added ActivityEventService to _typesToInitialise
+[Bootstrap] Creating or Loading Save Data
+[Bootstrap] Calling KillKnightSaveManager.Initialise
+[Bootstrap] Calling KillKnightSaveManager.CreateNewCampaignProfile
+[Bootstrap] Calling ConstructAndInjectAll()
+Successfully Initialised Phoenix.Damage.ExplosionService!
+Waiting for sample loading start
+Waiting for sample loading end
+Successfully Initialised Phoenix.Damage.HitService!
+Successfully Initialised Phoenix.Gameplay.BossVoiceService!
+Successfully Initialised Phoenix.Gameplay.EnemyDamageCalculatorService!
+Successfully found existing Monobehaviour Phoenix.Gameplay.FeelEventListenersService!
+Successfully Initialised Phoenix.Gameplay.FeelEventListenersService!
+Successfully found existing Monobehaviour Phoenix.Gameplay.PlayerInputService!
+Successfully Initialised Phoenix.Gameplay.PlayerInputService!
+Successfully Initialised Phoenix.Gameplay.RoomService!
+Successfully Initialised Phoenix.Gameplay.HapticsService!
+Successfully Initialised Phoenix.Gameplay.DashService!
+Successfully Initialised Phoenix.Gameplay.FriendsService!
+Successfully Instantiated GameObject for Phoenix.Gameplay.TimeService!
+Successfully Initialised Phoenix.Gameplay.TimeService!
+Successfully Initialised Phoenix.Gameplay.TutorialService!
+Successfully Initialised Phoenix.UI.FrameRateService!
+Successfully found existing Monobehaviour Phoenix.UI.UIPanelService!
+Successfully Initialised Phoenix.UI.UIPanelService!
+Successfully found existing Monobehaviour Phoenix.Input.UIInputService!
+Successfully Initialised Phoenix.Input.UIInputService!
+Successfully Initialised Phoenix.Utilities.LoadingTrackingService!
+Successfully Initialised Phoenix.Utilities.PoolManager!
+Successfully Initialised Phoenix.Utilities.SettingsService!
+Successfully Instantiated GameObject for Phoenix.Utilities.UpdateManager!
+Successfully Initialised Phoenix.Utilities.UpdateManager!
+Successfully Initialised ActivityEventService!
+Successfully Initialised Phoenix.PFX.PFXFactory!
+Successfully Initialised Phoenix.Enemies.LowQualityShadowInstancedRenderer!
+Successfully Initialised Phoenix.Projectiles.StandardProjectileService!
+Successfully Initialised Phoenix.Gameplay.BloodService!
+Successfully Initialised Phoenix.Gameplay.CheckpointService!
+Successfully Initialised Phoenix.Gameplay.GlitchTransitionService!
+Successfully Initialised Phoenix.Gameplay.SceneLoaderService!
+Successfully Initialised Phoenix.Gameplay.TeleportTransitionService!
+Successfully Initialised Phoenix.Gameplay.PauseService!
+Successfully Initialised Phoenix.Gameplay.PickupDropperService!
+Successfully Initialised Phoenix.Gameplay.ActiveReloadService!
+Successfully Initialised Phoenix.Gameplay.PlayerAmmoActionService!
+Successfully Initialised Phoenix.Gameplay.DamageIndicatorService!
+Successfully Initialised Phoenix.Gameplay.HyperDriveService!
+Successfully Initialised Phoenix.Gameplay.SpawnService!
+Successfully Initialised Phoenix.Gameplay.WeeklyDescentService!
+Successfully Initialised Phoenix.UI.UIAudioService!
+Missing DeploymentId, (likely offline) using backup live id 'a7ba9c45bcbc4d13954181ca7050b4ce'
+Hot key event ignored because there are no known users.
+AuthenticationService network accepted
+HandleSign
+Successfully Initialised Phoenix.Utilities.AuthenticationService!
+Successfully Initialised Phoenix.Gameplay.Analytics.SentryService!
+Successfully Initialised Phoenix.Projectiles.ProjectileFactory!
+Successfully Initialised Phoenix.Gameplay.EquipmentStorageService!
+Successfully Initialised Phoenix.Gameplay.ExecutionService!
+Successfully Initialised Phoenix.Gameplay.CinematicSequenceService!
+Successfully Initialised Phoenix.Gameplay.KillStreakService!
+Successfully Initialised Phoenix.Gameplay.ScoreService!
+Successfully Initialised Phoenix.Gameplay.AchievementsService!
+Successfully Initialised Phoenix.Gameplay.MusicService!
+Successfully Initialised Phoenix.Gameplay.CurrencyService!
+Successfully Initialised Phoenix.Gameplay.LayerCompletionService!
+Successfully Initialised Phoenix.Gameplay.NewPlayerReminderService!
+Successfully Initialised Phoenix.Gameplay.CarnageScoreService!
+Successfully Initialised Phoenix.Gameplay.AudioService!
+Successfully Initialised Phoenix.Gameplay.BestiaryTrackingService!
+Successfully Initialised Phoenix.Gameplay.GoalsService!
+Successfully Initialised Phoenix.Gameplay.TutorialUnlockService!
+Successfully Initialised Phoenix.Gameplay.EquipmentUnlockService!
+Successfully Initialised Phoenix.Gameplay.LoadoutService!
+Successfully Initialised Phoenix.Gameplay.GameStateFSM!
+Successfully Initialised Phoenix.Gameplay.LeaderboardsService!
+Successfully Initialised Phoenix.Gameplay.Analytics.AnalyticsService!
+Initialising audio parameters
+Audio param initialise start
+FMOD is initialized: True
+Audio param initialise get param description
+FMOD is initialized 2: True
+Audio param initialise assign killpower
+Audio param initialise 1
+Audio param initialise 2
+Audio param initialise 3
+Audio param initialise 4
+Audio param initialise 5
+Audio param initialise 6
+Audio param initialise 7
+Audio param initialise 8
+Audio param initialise 9
+Audio param initialise 10
+Audio param initialise 11
+Audio param initialise 12
+Audio param initialise 13
+Audio param initialise end
+Done initialising audio parameters
+Construction and Injection Successful!
+[Bootstrap] Calling PostInitAll()
+Calling PostInit() on LowQualityShadowInstancedRenderer
+Calling PostInit() on StandardProjectileService
+Calling PostInit() on BloodService
+Calling PostInit() on AudioService
+Calling PostInit() on BossVoiceService
+Calling PostInit() on MusicService
+Calling PostInit() on BestiaryTrackingService
+Calling PostInit() on CheckpointService
+Calling PostInit() on CurrencyService
+Calling PostInit() on EquipmentStorageService
+Calling PostInit() on EquipmentUnlockService
+Calling PostInit() on LoadoutService
+Calling PostInit() on ExecutionService
+Calling PostInit() on FeelEventListenersService
+Calling PostInit() on GameStateFSM
+Calling PostInit() on GoalsService
+Calling PostInit() on PlayerInputService
+Calling PostInit() on LayerCompletionService
+Calling PostInit() on CinematicSequenceService
+Calling PostInit() on GlitchTransitionService
+Calling PostInit() on RoomService
+Calling PostInit() on SceneLoaderService
+Calling PostInit() on TeleportTransitionService
+Calling PostInit() on NewPlayerReminderService
+Calling PostInit() on PauseService
+Calling PostInit() on HapticsService
+Calling PostInit() on PickupDropperService
+Calling PostInit() on ActiveReloadService
+Calling PostInit() on DashService
+Calling PostInit() on PlayerAmmoActionService
+Calling PostInit() on CarnageScoreService
+Calling PostInit() on HyperDriveService
+Calling PostInit() on KillStreakService
+Calling PostInit() on LeaderboardsService
+Calling PostInit() on ScoreService
+Calling PostInit() on SpawnService
+Calling PostInit() on TimeService
+Calling PostInit() on TutorialService
+Calling PostInit() on TutorialUnlockService
+Calling PostInit() on WeeklyDescentService
+Calling PostInit() on FrameRateService
+Calling PostInit() on UIAudioService
+Calling PostInit() on UIPanelService
+Duplicate device name found in InputSystemDevicePromptSettings: GXDKGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseEdgeWirelessController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: Keyboard. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: Mouse. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XBoxOneController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: GXDKGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XInputControllerWindows. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XboxGamepadMacOS. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XboxOneGampadMacOSWireless. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: WebGLGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: GXDKGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: PS4DualShockGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualShock4GamepadHID. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualShock4Gamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseEdgeWirelessController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: PS5DualSenseGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseGamepadPC. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseGamepadHID. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseEdgeWirelessController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: SwitchProController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: SwitchProControllerHID. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad1. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad2. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad3. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad4. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad5. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad6. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad7. Check your entries
+Using 60fps intro video
+Calling PostInit() on UIInputService
+Calling PostInit() on PoolManager
+Calling PostInit() on SettingsService
+Calling PostInit() on AnalyticsService
+Analytics service Created!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Post Init Successful!
+[Bootstrap] Successful, Calling OnBootstrapComplete
+!!!GOT CONTROLS!!!
+Duplicate device name found in InputSystemDevicePromptSettings: Keyboard. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: Mouse. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XBoxOneController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: GXDKGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XInputControllerWindows. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XboxGamepadMacOS. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: XboxOneGampadMacOSWireless. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: WebGLGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: GXDKGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: PS4DualShockGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualShock4GamepadHID. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualShock4Gamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseEdgeWirelessController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: PS5DualSenseGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseGamepadPC. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseGamepad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseGamepadHID. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: DualSenseEdgeWirelessController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: SwitchProController. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: SwitchProControllerHID. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad1. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad2. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad3. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad4. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad5. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad6. Check your entries
+Duplicate device name found in InputSystemDevicePromptSettings: NPad7. Check your entries
+[Bootstrap] Bootstrap Complete called successfully
+Loading Bank 'Interactables_TelaportAltar'
+Loading Bank 'Interactables_WrathOrb'
+Loading Bank 'Pickups_HealthShard'
+Loading Bank 'Pickups_HeavyAmmo'
+Loading Bank 'Pickups_PowerGem'
+Loading Bank 'Player_HitFeedback'
+Loading Bank 'Player_Interaction'
+Loading Bank 'Player_Movement'
+Loading Bank 'Player_Weapons'
+Loading Bank 'UI_Cinematic'
+Loading Bank 'UI_HUD'
+Loading Bank 'Ambience_Level_1'
+Loading Bank 'Music_Level_1'
+Loading Bank 'Music_Level_6'
+Loading Bank 'Traps_BeamTurret'
+Loading Bank 'Wraith_I'
+Loading Bank 'Spider_I'
+Loading Bank 'Wraith_II'
+Loading Bank 'Spider_II'
+Loading Bank 'Turrent_I'
+Loading Bank 'CrystalCritter'
+Loading Bank 'Pursuer_I'
+Loading Bank 'Pistol_I_WraithStrikers'
+Loading Bank 'Heavy_I_Shotgun'
+Loading Bank 'Sword_I_Seraphedge'
+RuntimeManager: 'Interactables_WrathOrb' Fully Loaded
+RuntimeManager: 'Pickups_HealthShard' Fully Loaded
+RuntimeManager: 'Pickups_HeavyAmmo' Fully Loaded
+RuntimeManager: 'Pickups_PowerGem' Fully Loaded
+RuntimeManager: 'Player_HitFeedback' Fully Loaded
+RuntimeManager: 'Player_Movement' Fully Loaded
+RuntimeManager: 'Player_Weapons' Fully Loaded
+RuntimeManager: 'UI_Cinematic' Fully Loaded
+RuntimeManager: 'UI_HUD' Fully Loaded
+RuntimeManager: 'Interactables_TelaportAltar' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Player_Interaction' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Ambience_Level_1' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Music_Level_1' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Music_Level_6' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Traps_BeamTurret' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Wraith_I' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Spider_I' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Wraith_II' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Spider_II' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Turrent_I' Meta Loaded, Starting Sample Load
+RuntimeManager: 'CrystalCritter' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Pursuer_I' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Pistol_I_WraithStrikers' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Heavy_I_Shotgun' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Sword_I_Seraphedge' Meta Loaded, Starting Sample Load
+RuntimeManager: 'Interactables_TelaportAltar' Fully Loaded
+RuntimeManager: 'Player_Interaction' Fully Loaded
+RuntimeManager: 'Ambience_Level_1' Fully Loaded
+RuntimeManager: 'Music_Level_1' Fully Loaded
+RuntimeManager: 'Music_Level_6' Fully Loaded
+RuntimeManager: 'Traps_BeamTurret' Fully Loaded
+RuntimeManager: 'Wraith_I' Fully Loaded
+RuntimeManager: 'Spider_I' Fully Loaded
+RuntimeManager: 'Wraith_II' Fully Loaded
+RuntimeManager: 'Spider_II' Fully Loaded
+RuntimeManager: 'Turrent_I' Fully Loaded
+RuntimeManager: 'CrystalCritter' Fully Loaded
+RuntimeManager: 'Pursuer_I' Fully Loaded
+RuntimeManager: 'Pistol_I_WraithStrikers' Fully Loaded
+RuntimeManager: 'Heavy_I_Shotgun' Fully Loaded
+RuntimeManager: 'Sword_I_Seraphedge' Fully Loaded
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Epic Online Services Login succeeded
+Logged In User: userDisplayName=sunken90 | epicAccountId=6dbfddfb5c8048d3a03b9b63f3d3fa45
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Failed to create agent because there is no valid NavMesh
+Connect Login Complete: ProductUserId=000286d0302a4244a6eb3ccdacbf8579
+[AchievementsService]: Login Successful
+All Target Datas have successfully pooled | _targetPoolEntryGroupDataIds.Count=5
+ArgumentNullException: Value cannot be null.
+Parameter name: value
+  at System.String.Contains (System.String value) [0x00000] in <00000000000000000000000000000000>:0 
+  at Phoenix.Gameplay.LeaderboardsService.TrySendPlatformIDMappingForLeaderboards () [0x00000] in <00000000000000000000000000000000>:0 
+  at System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start[TStateMachine] (TStateMachine& stateMachine) [0x00000] in <00000000000000000000000000000000>:0 
+  at Phoenix.Gameplay.LeaderboardsService.TrySendPlatformIDMappingForLeaderboards () [0x00000] in <00000000000000000000000000000000>:0 
+  at Phoenix.Gameplay.Analytics.AnalyticsService.OnDataOptInComplete () [0x00000] in <00000000000000000000000000000000>:0 
+  at Phoenix.UI.PreBootstrapSplashScreenUI.DataOptIn () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Events.UnityEvent.Invoke () [0x00000] in <00000000000000000000000000000000>:0 
+  at Phoenix.UI.PhoenixButton.OnSubmit (UnityEngine.EventSystems.BaseEventData eventData) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.InputSystem.UI.InputSystemUIInputModule.ProcessNavigation (UnityEngine.InputSystem.UI.NavigationModel& navigationState) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.InputSystem.UI.InputSystemUIInputModule.Process () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.EventSystems.EventSystem.Update () [0x00000] in <00000000000000000000000000000000>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext+WorkRequest.Invoke () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.Exec () [0x00000] in <00000000000000000000000000000000>:0 
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogException(Exception, Object)
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:CallOverridenDebugHandler(Exception, Object)
+
+Unity signed in!
+setting _accessingLeaderboardsFromMainMenu true
+Had no friends to retrieve - False
+GetScoresByPlayerIdsAsync with leaderboardId=OddWeek_Difficulty0_PC, playerIds.Count=1 - fromLeaderboardUI: False
+LeaderboardService::GetFriendResults - Leaderboard call failed
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Attempting to load AssetReference that has already been loaded. Handle is exposed through getter OperationHandle
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+Sentry.Unity.Integrations.UnityLogHandlerIntegration:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+UnityEngine.AddressableAssets.AssetReference:LoadAssetAsync()
+Phoenix.Utilities.PhoenixUtilities:TryLoadAssetSync(AssetReference)
+ScriptableObjectArchitecture.BaseGameEventListener`2:OnDisable()
+
+Memory Statistics:
+[ALLOC_TEMP_TLS] TLS Allocator
+  StackAllocators : 
+    [ALLOC_TEMP_MAIN]
+      Peak usage frame count: [2.0 KB-4.0 KB]: 200 frames, [4.0 KB-8.0 KB]: 31 frames, [8.0 KB-16.0 KB]: 99 frames, [16.0 KB-32.0 KB]: 21 frames, [32.0 KB-64.0 KB]: 8 frames, [64.0 KB-128.0 KB]: 392 frames, [128.0 KB-256.0 KB]: 1 frames, [256.0 KB-0.5 MB]: 1 frames, [2.0 MB-4.0 MB]: 2 frames
+      Initial Block Size 4.0 MB
+      Current Block Size 5.2 MB
+      Peak Allocated Bytes 3.9 MB
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.AsyncRead]
+      Initial Block Size 64.0 KB
+      Current Block Size 128.0 KB
+      Peak Allocated Bytes 127.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager]
+      Initial Block Size 256.0 KB
+      Current Block Size 508.0 KB
+      Peak Allocated Bytes 504.4 KB
+      Overflow Count 51
+    [ALLOC_TEMP_Background Job.Worker 8]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 6]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 27.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 0]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 10]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 9]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 5]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 14]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 6]
+      Initial Block Size 32.0 KB
+      Current Block Size 36.0 KB
+      Peak Allocated Bytes 32.1 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 4]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 27.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 3]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 12]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_EnlightenWorker] x 12
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 15]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 1]
+      Initial Block Size 32.0 KB
+      Current Block Size 36.0 KB
+      Peak Allocated Bytes 34.9 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 2]
+      Initial Block Size 32.0 KB
+      Current Block Size 36.0 KB
+      Peak Allocated Bytes 32.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 7]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_UnityGfxDeviceWorker]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 15.6 KB
+      Overflow Count 0
+    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 11
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 138 B
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 5]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 9]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 13]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 8]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 7]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 26.7 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 1]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 27.8 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 2]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 26.6 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 3]
+      Initial Block Size 32.0 KB
+      Current Block Size 36.0 KB
+      Peak Allocated Bytes 32.1 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 11]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_Job.Worker 10]
+      Initial Block Size 256.0 KB
+      Current Block Size 256.0 KB
+      Peak Allocated Bytes 24.4 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+    [ALLOC_TEMP_CloudJob.Worker 0]
+      Initial Block Size 32.0 KB
+      Current Block Size 32.0 KB
+      Peak Allocated Bytes 4.2 KB
+      Overflow Count 0
+    [ALLOC_TEMP_HIDInput]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 10.7 KB
+      Overflow Count 0
+    [ALLOC_TEMP_Background Job.Worker 4]
+      Initial Block Size 32.0 KB
+      Current Block Size 36.0 KB
+      Peak Allocated Bytes 32.0 KB
+      Overflow Count 0
+    [ALLOC_TEMP_BatchDeleteObjects]
+      Initial Block Size 64.0 KB
+      Current Block Size 64.0 KB
+      Peak Allocated Bytes 54 B
+      Overflow Count 0
+[ALLOC_DEFAULT] Dual Thread Allocator
+  Peak main deferred allocation count 13962
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 10 Subsections = 10240 buckets. Failed count: 293388
+        32B: 37 Subsections = 18944 buckets. Failed count: 72106
+        48B: 39 Subsections = 13312 buckets. Failed count: 270263
+        64B: 38 Subsections = 9728 buckets. Failed count: 139259
+        80B: 52 Subsections = 10649 buckets. Failed count: 11459
+        96B: 40 Subsections = 6826 buckets. Failed count: 33974
+        112B: 25 Subsections = 3657 buckets. Failed count: 8728
+        128B: 15 Subsections = 1920 buckets. Failed count: 168760
+    [ALLOC_DEFAULT_MAIN]
+      Peak usage frame count: [64.0 MB-128.0 MB]: 210 frames, [128.0 MB-256.0 MB]: 545 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 16
+      Peak Allocated memory 225.8 MB
+      Peak Large allocation bytes 8.0 MB
+    [ALLOC_DEFAULT_THREAD]
+      Peak usage frame count: [32.0 MB-64.0 MB]: 755 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 4
+      Peak Allocated memory 63.3 MB
+      Peak Large allocation bytes 16.0 MB
+[ALLOC_TEMP_JOB_1_FRAME]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_2_FRAMES]
+  Initial Block Size 2.0 MB
+  Used Block Count 0
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
+  Initial Block Size 2.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_TEMP_JOB_ASYNC (Background)]
+  Initial Block Size 1.0 MB
+  Used Block Count 1
+  Overflow Count (too large) 0
+  Overflow Count (full) 0
+[ALLOC_GFX] Dual Thread Allocator
+  Peak main deferred allocation count 16
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 10 Subsections = 10240 buckets. Failed count: 293388
+        32B: 37 Subsections = 18944 buckets. Failed count: 72106
+        48B: 39 Subsections = 13312 buckets. Failed count: 270263
+        64B: 38 Subsections = 9728 buckets. Failed count: 139259
+        80B: 52 Subsections = 10649 buckets. Failed count: 11459
+        96B: 40 Subsections = 6826 buckets. Failed count: 33974
+        112B: 25 Subsections = 3657 buckets. Failed count: 8728
+        128B: 15 Subsections = 1920 buckets. Failed count: 168760
+    [ALLOC_GFX_MAIN]
+      Peak usage frame count: [128.0 KB-256.0 KB]: 23 frames, [256.0 KB-0.5 MB]: 174 frames, [0.5 MB-1.0 MB]: 23 frames, [1.0 MB-2.0 MB]: 529 frames, [2.0 MB-4.0 MB]: 6 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 1
+      Peak Allocated memory 2.3 MB
+      Peak Large allocation bytes 0 B
+    [ALLOC_GFX_THREAD]
+      Peak usage frame count: [32.0 MB-64.0 MB]: 755 frames
+      Requested Block Size 16.0 MB
+      Peak Block count 3
+      Peak Allocated memory 45.7 MB
+      Peak Large allocation bytes 0 B
+[ALLOC_CACHEOBJECTS] Dual Thread Allocator
+  Peak main deferred allocation count 289
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 10 Subsections = 10240 buckets. Failed count: 293388
+        32B: 37 Subsections = 18944 buckets. Failed count: 72106
+        48B: 39 Subsections = 13312 buckets. Failed count: 270263
+        64B: 38 Subsections = 9728 buckets. Failed count: 139259
+        80B: 52 Subsections = 10649 buckets. Failed count: 11459
+        96B: 40 Subsections = 6826 buckets. Failed count: 33974
+        112B: 25 Subsections = 3657 buckets. Failed count: 8728
+        128B: 15 Subsections = 1920 buckets. Failed count: 168760
+    [ALLOC_CACHEOBJECTS_MAIN]
+      Peak usage frame count: [32.0 MB-64.0 MB]: 755 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 13
+      Peak Allocated memory 52.1 MB
+      Peak Large allocation bytes 23.5 MB
+    [ALLOC_CACHEOBJECTS_THREAD]
+      Peak usage frame count: [32.0 MB-64.0 MB]: 755 frames
+      Requested Block Size 4.0 MB
+      Peak Block count 15
+      Peak Allocated memory 62.6 MB
+      Peak Large allocation bytes 13.6 MB
+[ALLOC_TYPETREE] Dual Thread Allocator
+  Peak main deferred allocation count 2
+    [ALLOC_BUCKET]
+      Large Block size 4.0 MB
+      Used Block count 1
+      Peak Allocated bytes 4.0 MB
+      Failed Allocations. Bucket layout:
+        16B: 10 Subsections = 10240 buckets. Failed count: 293388
+        32B: 37 Subsections = 18944 buckets. Failed count: 72106
+        48B: 39 Subsections = 13312 buckets. Failed count: 270263
+        64B: 38 Subsections = 9728 buckets. Failed count: 139259
+        80B: 52 Subsections = 10649 buckets. Failed count: 11459
+        96B: 40 Subsections = 6826 buckets. Failed count: 33974
+        112B: 25 Subsections = 3657 buckets. Failed count: 8728
+        128B: 15 Subsections = 1920 buckets. Failed count: 168760
+    [ALLOC_TYPETREE_MAIN]
+      Peak usage frame count: [32.0 KB-64.0 KB]: 755 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 1
+      Peak Allocated memory 51.9 KB
+      Peak Large allocation bytes 0 B
+    [ALLOC_TYPETREE_THREAD]
+      Peak usage frame count: [64.0 KB-128.0 KB]: 1 frames, [2.0 MB-4.0 MB]: 129 frames, [4.0 MB-8.0 MB]: 625 frames
+      Requested Block Size 2.0 MB
+      Peak Block count 4
+      Peak Allocated memory 7.3 MB
+      Peak Large allocation bytes 0 B

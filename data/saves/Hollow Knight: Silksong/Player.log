@@ -1,0 +1,87 @@
+Mono path[0] = 'Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/Managed'
+Mono config path = 'Z:/Games/Hollow Knight Silksong/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.0.50f1-uum-100966-branch1 (359a00488d30)
+[Subsystems] Discovering subsystems at path Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   NVIDIA
+    VRAM:     4064 MB
+    Driver:   32.0.65535.65535
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.293 seconds
+- Finished resetting the current domain, in  0.004 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.550500 ms
+Steam initializing
+Steam logged in as GameDriveOrg
+Selected online subsystem SteamOnlineSubsystem
+Steam stats received.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 527)
+UnloadTime: 4.473000 ms
+Discovered supported languages: DE, EN, ES, FR, IT, JA, KO, PT, RU, ZH
+Loaded system language 'English'
+Loaded system language code 'EN'
+Restored language code 'EN'
+Couldn't find a Game Manager, make sure one exists in the scene.
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 6108.
+Total: 6.456600 ms (FindLiveObjects: 0.408400 ms CreateObjectMapping: 0.475100 ms MarkObjects: 5.505400 ms  DeleteObjects: 0.066000 ms)
+
+Couldn't find GameCameras, make sure one exists in the scene.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 527)
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 13326.
+Total: 9.102500 ms (FindLiveObjects: 0.720400 ms CreateObjectMapping: 0.875900 ms MarkObjects: 7.484200 ms  DeleteObjects: 0.021400 ms)
+
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 579)
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find a UIManager, make sure one exists in the scene.
+Couldn't find GameCameras, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+UnloadTime: 22.245300 ms
+Loaded saved language code 'EN'
+Restored language code 'EN'
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 66967.
+Total: 40.888600 ms (FindLiveObjects: 4.471600 ms CreateObjectMapping: 5.999600 ms MarkObjects: 30.174700 ms  DeleteObjects: 0.241600 ms)
+
+MenuButton missing flashEffect!
+Shutting down Steam API.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+Couldn't find a Game Manager, make sure one exists in the scene.
+[Physics::Module] Cleanup current backned.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.

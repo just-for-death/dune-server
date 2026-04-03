@@ -1,0 +1,150 @@
+Mono path[0] = 'Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/Managed'
+Mono config path = 'Z:/Games/Hollow Knight Silksong/MonoBleedingEdge/etc'
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.0.50f1-uum-100966-branch1 (359a00488d30)
+[Subsystems] Discovering subsystems at path Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+d3d11: failed to create factory (80004005).
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+=================================================================
+Crash!!!
+SymInit: Symbol-SearchPath: '.;Z:\Games\Hollow Knight Silksong;Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/Plugins\x86_64;Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/Plugins;Z:\Games\Hollow Knight Silksong;C:\windows;C:\windows\system32;', symOptions: 534, UserName: 'retro'
+OS-Version: 10.0.0
+Z:\Games\Hollow Knight Silksong\Hollow Knight Silksong.exe:Hollow Knight Silksong.exe (0000000140000000), size: 692224 (result: 0), SymType: '-deferred-', PDB: 'Z:\Games\Hollow Knight Silksong\Hollow Knight Silksong.exe', fileVersion: 6000.0.50.39424
+C:\windows\system32\ntdll.dll:ntdll.dll (0000000170000000), size: 679936 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ntdll.dll', fileVersion: 6.1.7601.24059
+C:\windows\system32\kernel32.dll:kernel32.dll (000000007B600000), size: 389120 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\kernel32.dll', fileVersion: 10.0.19043.1466
+C:\windows\system32\kernelbase.dll:kernelbase.dll (000000007B000000), size: 2736128 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\kernelbase.dll'
+Z:\Games\Hollow Knight Silksong\UnityPlayer.dll:UnityPlayer.dll (0000000180000000), size: 34664448 (result: 0), SymType: '-deferred-', PDB: 'Z:\Games\Hollow Knight Silksong\UnityPlayer.dll', fileVersion: 6000.0.50.39424
+C:\windows\system32\USER32.dll:USER32.dll (0000000067CC0000), size: 1740800 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\USER32.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\advapi32.dll:advapi32.dll (0000000069F80000), size: 274432 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\advapi32.dll', fileVersion: 10.0.10240.16384
+C:\windows\system32\msvcrt.dll:msvcrt.dll (0000000069580000), size: 647168 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\msvcrt.dll', fileVersion: 7.0.2600.2180
+C:\windows\system32\sechost.dll:sechost.dll (000000006C240000), size: 176128 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\sechost.dll'
+C:\windows\system32\ucrtbase.dll:ucrtbase.dll (0000000068740000), size: 811008 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ucrtbase.dll', fileVersion: 10.0.14393.2247
+C:\windows\system32\gdi32.dll:gdi32.dll (000000006C380000), size: 528384 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\gdi32.dll', fileVersion: 10.0.0.0
+C:\windows\system32\win32u.dll:win32u.dll (0000000068680000), size: 233472 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\win32u.dll'
+C:\windows\system32\version.dll:version.dll (000000006EF00000), size: 57344 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\version.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\ole32.dll:ole32.dll (000000006CB40000), size: 1208320 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ole32.dll', fileVersion: 10.0.0.0
+C:\windows\system32\combase.dll:combase.dll (000000006D8C0000), size: 380928 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\combase.dll'
+C:\windows\system32\rpcrt4.dll:rpcrt4.dll (0000000069700000), size: 569344 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\rpcrt4.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\SHLWAPI.dll:SHLWAPI.dll (0000000063680000), size: 376832 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\SHLWAPI.dll', fileVersion: 6.0.2800.1692
+C:\windows\system32\shcore.dll:shcore.dll (000000006F100000), size: 110592 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\shcore.dll'
+C:\windows\system32\SETUPAPI.dll:SETUPAPI.dll (000000006EB40000), size: 528384 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\SETUPAPI.dll'
+C:\windows\system32\SHELL32.dll:SHELL32.dll (000000006CF00000), size: 9728000 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\SHELL32.dll', fileVersion: 6.0.2900.6242
+C:\windows\system32\OPENGL32.dll:OPENGL32.dll (000000007A800000), size: 1089536 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\OPENGL32.dll', fileVersion: 5.1.2600.2082
+C:\windows\system32\WINMM.dll:WINMM.dll (00000000658C0000), size: 802816 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\WINMM.dll'
+C:\windows\system32\msacm32.dll:msacm32.dll (0000000062D40000), size: 131072 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\msacm32.dll'
+C:\windows\system32\OLEAUT32.dll:OLEAUT32.dll (0000000062100000), size: 1323008 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\OLEAUT32.dll', fileVersion: 6.0.6001.18000
+C:\windows\system32\IMM32.dll:IMM32.dll (0000000064A00000), size: 131072 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\IMM32.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\IPHLPAPI.DLL:IPHLPAPI.DLL (0000000000370000), size: 225280 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\IPHLPAPI.DLL', fileVersion: 5.1.2600.2180
+C:\windows\system32\dnsapi.dll:dnsapi.dll (0000000067880000), size: 94208 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dnsapi.dll', fileVersion: 5.2.3790.4318
+C:\windows\system32\nsi.dll:nsi.dll (00000000003B0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\nsi.dll'
+C:\windows\system32\WINHTTP.dll:WINHTTP.dll (0000000071100000), size: 327680 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\WINHTTP.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\jsproxy.dll:jsproxy.dll (000000006C980000), size: 163840 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\jsproxy.dll'
+C:\windows\system32\ws2_32.dll:ws2_32.dll (00000000003C0000), size: 167936 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ws2_32.dll', fileVersion: 5.1.2600.5512
+C:\windows\system32\bcrypt.dll:bcrypt.dll (000000006F900000), size: 102400 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\bcrypt.dll', fileVersion: 6.0.6000.16386
+C:\windows\system32\HID.DLL:HID.DLL (0000000062040000), size: 65536 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\HID.DLL', fileVersion: 10.0.0.0
+C:\windows\system32\d3d11.dll:d3d11.dll (0000000359050000), size: 4464640 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\d3d11.dll', fileVersion: 10.0.17763.1
+C:\windows\system32\dxgi.dll:dxgi.dll (00000002EDF00000), size: 2965504 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dxgi.dll', fileVersion: 10.0.17763.1
+C:\windows\system32\CRYPT32.dll:CRYPT32.dll (00000000003F0000), size: 856064 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\CRYPT32.dll', fileVersion: 5.131.2600.1243
+C:\windows\system32\dwmapi.dll:dwmapi.dll (0000000070500000), size: 61440 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dwmapi.dll', fileVersion: 6.0.6000.16386
+C:\windows\system32\winex11.drv:winex11.drv (0000000063080000), size: 483328 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\winex11.drv', fileVersion: 10.0.0.0
+C:\windows\system32\uxtheme.dll:uxtheme.dll (0000000000DA0000), size: 225280 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\uxtheme.dll', fileVersion: 10.0.0.0
+Z:\Games\Hollow Knight Silksong\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00000000636E0000), size: 10756096 (result: 0), SymType: '-deferred-', PDB: 'Z:\Games\Hollow Knight Silksong\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll'
+C:\windows\system32\dbghelp.dll:dbghelp.dll (000000006FF80000), size: 417792 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dbghelp.dll', fileVersion: 6.1.7601.17514
+
+========== OUTPUTTING STACK TRACE ==================
+
+SymInit: Symbol-SearchPath: '.;Z:\Games\Hollow Knight Silksong;Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/Plugins\x86_64;Z:/Games/Hollow Knight Silksong/Hollow Knight Silksong_Data/Plugins;Z:\Games\Hollow Knight Silksong;C:\windows;C:\windows\system32;', symOptions: 534, UserName: 'retro'
+OS-Version: 10.0.0
+Z:\Games\Hollow Knight Silksong\Hollow Knight Silksong.exe:Hollow Knight Silksong.exe (0000000140000000), size: 692224 (result: 0), SymType: '-deferred-', PDB: 'Z:\Games\Hollow Knight Silksong\Hollow Knight Silksong.exe', fileVersion: 6000.0.50.39424
+C:\windows\system32\ntdll.dll:ntdll.dll (0000000170000000), size: 679936 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ntdll.dll', fileVersion: 6.1.7601.24059
+C:\windows\system32\kernel32.dll:kernel32.dll (000000007B600000), size: 389120 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\kernel32.dll', fileVersion: 10.0.19043.1466
+C:\windows\system32\kernelbase.dll:kernelbase.dll (000000007B000000), size: 2736128 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\kernelbase.dll'
+Z:\Games\Hollow Knight Silksong\UnityPlayer.dll:UnityPlayer.dll (0000000180000000), size: 34664448 (result: 0), SymType: '-deferred-', PDB: 'Z:\Games\Hollow Knight Silksong\UnityPlayer.dll', fileVersion: 6000.0.50.39424
+C:\windows\system32\USER32.dll:USER32.dll (0000000067CC0000), size: 1740800 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\USER32.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\advapi32.dll:advapi32.dll (0000000069F80000), size: 274432 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\advapi32.dll', fileVersion: 10.0.10240.16384
+C:\windows\system32\msvcrt.dll:msvcrt.dll (0000000069580000), size: 647168 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\msvcrt.dll', fileVersion: 7.0.2600.2180
+C:\windows\system32\sechost.dll:sechost.dll (000000006C240000), size: 176128 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\sechost.dll'
+C:\windows\system32\ucrtbase.dll:ucrtbase.dll (0000000068740000), size: 811008 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ucrtbase.dll', fileVersion: 10.0.14393.2247
+C:\windows\system32\gdi32.dll:gdi32.dll (000000006C380000), size: 528384 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\gdi32.dll', fileVersion: 10.0.0.0
+C:\windows\system32\win32u.dll:win32u.dll (0000000068680000), size: 233472 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\win32u.dll'
+C:\windows\system32\version.dll:version.dll (000000006EF00000), size: 57344 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\version.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\ole32.dll:ole32.dll (000000006CB40000), size: 1208320 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ole32.dll', fileVersion: 10.0.0.0
+C:\windows\system32\combase.dll:combase.dll (000000006D8C0000), size: 380928 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\combase.dll'
+C:\windows\system32\rpcrt4.dll:rpcrt4.dll (0000000069700000), size: 569344 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\rpcrt4.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\SHLWAPI.dll:SHLWAPI.dll (0000000063680000), size: 376832 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\SHLWAPI.dll', fileVersion: 6.0.2800.1692
+C:\windows\system32\shcore.dll:shcore.dll (000000006F100000), size: 110592 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\shcore.dll'
+C:\windows\system32\SETUPAPI.dll:SETUPAPI.dll (000000006EB40000), size: 528384 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\SETUPAPI.dll'
+C:\windows\system32\SHELL32.dll:SHELL32.dll (000000006CF00000), size: 9728000 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\SHELL32.dll', fileVersion: 6.0.2900.6242
+C:\windows\system32\OPENGL32.dll:OPENGL32.dll (000000007A800000), size: 1089536 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\OPENGL32.dll', fileVersion: 5.1.2600.2082
+C:\windows\system32\WINMM.dll:WINMM.dll (00000000658C0000), size: 802816 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\WINMM.dll'
+C:\windows\system32\msacm32.dll:msacm32.dll (0000000062D40000), size: 131072 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\msacm32.dll'
+C:\windows\system32\OLEAUT32.dll:OLEAUT32.dll (0000000062100000), size: 1323008 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\OLEAUT32.dll', fileVersion: 6.0.6001.18000
+C:\windows\system32\IMM32.dll:IMM32.dll (0000000064A00000), size: 131072 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\IMM32.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\IPHLPAPI.DLL:IPHLPAPI.DLL (0000000000370000), size: 225280 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\IPHLPAPI.DLL', fileVersion: 5.1.2600.2180
+C:\windows\system32\dnsapi.dll:dnsapi.dll (0000000067880000), size: 94208 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dnsapi.dll', fileVersion: 5.2.3790.4318
+C:\windows\system32\nsi.dll:nsi.dll (00000000003B0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\nsi.dll'
+C:\windows\system32\WINHTTP.dll:WINHTTP.dll (0000000071100000), size: 327680 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\WINHTTP.dll', fileVersion: 5.1.2600.2180
+C:\windows\system32\jsproxy.dll:jsproxy.dll (000000006C980000), size: 163840 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\jsproxy.dll'
+C:\windows\system32\ws2_32.dll:ws2_32.dll (00000000003C0000), size: 167936 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\ws2_32.dll', fileVersion: 5.1.2600.5512
+C:\windows\system32\bcrypt.dll:bcrypt.dll (000000006F900000), size: 102400 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\bcrypt.dll', fileVersion: 6.0.6000.16386
+C:\windows\system32\HID.DLL:HID.DLL (0000000062040000), size: 65536 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\HID.DLL', fileVersion: 10.0.0.0
+C:\windows\system32\d3d11.dll:d3d11.dll (0000000359050000), size: 4464640 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\d3d11.dll', fileVersion: 10.0.17763.1
+C:\windows\system32\dxgi.dll:dxgi.dll (00000002EDF00000), size: 2965504 (result: 0), SymType: '-exported-', PDB: 'C:\windows\system32\dxgi.dll', fileVersion: 10.0.17763.1
+C:\windows\system32\CRYPT32.dll:CRYPT32.dll (00000000003F0000), size: 856064 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\CRYPT32.dll', fileVersion: 5.131.2600.1243
+C:\windows\system32\dwmapi.dll:dwmapi.dll (0000000070500000), size: 61440 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dwmapi.dll', fileVersion: 6.0.6000.16386
+C:\windows\system32\winex11.drv:winex11.drv (0000000063080000), size: 483328 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\winex11.drv', fileVersion: 10.0.0.0
+C:\windows\system32\uxtheme.dll:uxtheme.dll (0000000000DA0000), size: 225280 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\uxtheme.dll', fileVersion: 10.0.0.0
+Z:\Games\Hollow Knight Silksong\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00000000636E0000), size: 10756096 (result: 0), SymType: '-deferred-', PDB: 'Z:\Games\Hollow Knight Silksong\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll'
+C:\windows\system32\dbghelp.dll:dbghelp.dll (000000006FF80000), size: 417792 (result: 0), SymType: '-deferred-', PDB: 'C:\windows\system32\dbghelp.dll', fileVersion: 6.1.7601.17514
+  ERROR: SymGetSymFromAddr64, GetLastError: 'No more files.' (Address: 00000002EDFD5F78)
+0x00000002EDFD5F78 (dxgi) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000002EDF0AC10)
+0x00000002EDF0AC10 (dxgi) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000002EDF06830)
+0x00000002EDF06830 (dxgi) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000002EDF0A1D7)
+0x00000002EDF0A1D7 (dxgi) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Invalid handle.' (Address: 00000001808DDCB6)
+0x00000001808DDCB6 (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000001806CAF71)
+0x00000001806CAF71 (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000001809BB06B)
+0x00000001809BB06B (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000001806CC493)
+0x00000001806CC493 (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000001806CCB61)
+0x00000001806CCB61 (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 0000000180544F98)
+0x0000000180544F98 (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 0000000180579E2C)
+0x0000000180579E2C (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000001807D5771)
+0x00000001807D5771 (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 00000001807D609B)
+0x00000001807D609B (unityplayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Invalid handle.' (Address: 00000001400011F2)
+0x00000001400011F2 (hollow knight silksong) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 000000007B62A1C9)
+0x000000007B62A1C9 (kernel32) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Success.' (Address: 0000000170061CC7)
+0x0000000170061CC7 (ntdll) (function-name not available)
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/users/retro/Temp/Team Cherry/Hollow Knight Silksong/Crashes

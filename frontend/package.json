@@ -1,6 +1,7 @@
 {
   "name": "dune-frontend",
   "version": "1.0.0",
+  "author": "Yashwin",
   "private": true,
   "scripts": {
     "dev": "vite",

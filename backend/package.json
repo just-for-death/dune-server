@@ -1,6 +1,7 @@
 {
   "name": "dune-server",
   "version": "1.0.0",
+  "author": "Yashwin",
   "description": "Dockerized backend for Save Sync application",
   "main": "server.js",
   "type": "module",

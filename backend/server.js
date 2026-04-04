@@ -35,14 +35,16 @@ function getDB() {
 }
 
 function saveDB(data) {
-    _dbCache = data; // update cache first
-    const tmpPath = DB_PATH + '.tmp';
+    _dbCache = data; 
+    const tmpPath = DB_PATH + '.' + Date.now() + '.tmp';
     try {
         fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2));
+        // Atomic rename ensures no partial writes reach the DB
         fs.renameSync(tmpPath, DB_PATH);
     } catch (e) {
-        console.error('Failed to save DB atomically:', e);
-        fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
+        console.error('CRITICAL: Failed to save DB atomically:', e.message);
+        if (fs.existsSync(tmpPath)) fs.unlinkSync(tmpPath);
+        throw e; // Reraise so API returns 500 instead of lying about success
     }
 }
 // ─────────────────────────────────────────────────────────────────────────────
@@ -56,7 +58,8 @@ if (!fs.existsSync(DB_PATH)) {
             steamGridApiKey: '',
             ollamaEndpoint: 'http://ollama:11434',
             ollamaModel: 'phi4-mini:latest',
-            localSources: []
+            localSources: [],
+            remoteServers: []
         }
     });
 } else {
@@ -69,7 +72,8 @@ if (!fs.existsSync(DB_PATH)) {
             steamGridApiKey: '',
             ollamaEndpoint: 'http://ollama:11434',
             ollamaModel: 'phi4-mini:latest',
-            localSources: []
+            localSources: [],
+            remoteServers: []
         };
         changed = true;
     }
@@ -77,7 +81,8 @@ if (!fs.existsSync(DB_PATH)) {
     const defaults = {
         ollamaEndpoint: 'http://ollama:11434',
         ollamaModel: 'phi4-mini:latest',
-        localSources: []
+        localSources: [],
+        remoteServers: []
     };
     for (const [key, val] of Object.entries(defaults)) {
         if (db.settings[key] === undefined) {
@@ -131,11 +136,17 @@ app.post('/api/upload-file', (req, res) => {
         if (!game || !filePath) return res.status(400).json({ success: false, message: 'Game and path headers required.' });
 
         const gameName = path.basename(game.toString());
-        const safePath = filePath.toString().replace(/\.\.[\\/]/g, '');
+        // SECURITY: Harden path traversal protection
+        const cleanPath = filePath.toString().replace(/^(\.\.(\/|\\|$))+/g, '').replace(/[<>:"|?*]/g, '_');
+        const finalPath = path.join(SAVES_DIR, gameName, cleanPath);
+        
+        // Ensure finalPath is still within the gameRoot
         const gameRoot = path.join(SAVES_DIR, gameName);
-        const finalPath = path.join(gameRoot, safePath);
+        if (!finalPath.startsWith(gameRoot)) {
+            return res.status(403).json({ success: false, message: 'Forbidden path.' });
+        }
+        
         const finalDir = path.dirname(finalPath);
-
         if (!fs.existsSync(finalDir)) fs.mkdirSync(finalDir, { recursive: true });
 
         // Versioning: If file exists, archive it before overwriting
@@ -397,6 +408,44 @@ app.get('/api/ollama-health', async (req, res) => {
     }
 });
 
+async function triggerRemoteSync(syncedGames) {
+    const db = getDB();
+    const remoteServers = db.settings?.remoteServers || [];
+    if (remoteServers.length === 0) return;
+
+    for (const gameName of syncedGames) {
+        const gameDir = path.join(SAVES_DIR, gameName);
+        if (!fs.existsSync(gameDir)) continue;
+
+        const zipPath = path.join(SAVES_DIR, `${gameName}_sync.zip`);
+        try {
+            await execFileAsync('zip', ['-r', zipPath, '.', '-x', '.versions/*'], { cwd: gameDir });
+
+            for (const server of remoteServers) {
+                try {
+                    const stream = fs.createReadStream(zipPath);
+                    await axios.post(`${server.url}/api/upload-file`, stream, {
+                        headers: {
+                            'Content-Type': 'application/octet-stream',
+                            'x-game': gameName,
+                            'x-path': 'saves.zip'
+                        },
+                        maxBodyLength: Infinity,
+                        maxContentLength: Infinity
+                    });
+                    console.log(`Successfully synced ${gameName} to remote server ${server.url}`);
+                } catch (err) {
+                    console.error(`Failed to push ${gameName} to ${server.url}:`, err.message);
+                }
+            }
+        } catch (err) {
+            console.error(`Failed to zip ${gameName} for remote sync:`, err.message);
+        } finally {
+            if (fs.existsSync(zipPath)) fs.unlinkSync(zipPath);
+        }
+    }
+}
+
 // API: Trigger Local Sync from Windows Mounted Drive
 app.post('/api/local-sync', async (req, res) => {
     try {
@@ -436,7 +485,14 @@ app.post('/api/local-sync', async (req, res) => {
             }
         }
 
-        if (syncedGames.length > 0) saveDB(db);
+        if (syncedGames.length > 0) {
+            saveDB(db);
+            // Deduplicate games in case local folders contained duplicate references
+            const uniqueGames = [...new Set(syncedGames)];
+            setImmediate(() => {
+                triggerRemoteSync(uniqueGames).catch(err => console.error("Remote Sync Error:", err));
+            });
+        }
         res.json({ success: true, count: totalFilesSynced, games: syncedGames });
     } catch (e) {
         console.error('Local Sync Error:', e.message);
@@ -480,6 +536,49 @@ app.delete('/api/local-sources/:id', (req, res) => {
         const { id } = req.params;
         const db = getDB();
         db.settings.localSources = (db.settings.localSources || []).filter(s => s.id.toString() !== id);
+        saveDB(db);
+        res.json({ success: true });
+    } catch (e) {
+        res.status(500).json({ success: false });
+    }
+});
+
+// API: Manage Remote Servers
+app.get('/api/remote-servers', (req, res) => {
+    try {
+        const db = getDB();
+        res.json({ success: true, servers: db.settings?.remoteServers || [] });
+    } catch (e) {
+        res.status(500).json({ success: false });
+    }
+});
+
+app.post('/api/remote-servers', (req, res) => {
+    try {
+        const { url } = req.body;
+        if (!url || !url.startsWith('http')) {
+            return res.status(400).json({ success: false, message: 'Valid HTTP URL required.' });
+        }
+
+        const db = getDB();
+        if (!db.settings.remoteServers) db.settings.remoteServers = [];
+        if (db.settings.remoteServers.some(s => s.url === url)) {
+            return res.status(400).json({ success: false, message: 'Server already exists.' });
+        }
+
+        db.settings.remoteServers.push({ id: Date.now(), url });
+        saveDB(db);
+        res.json({ success: true });
+    } catch (e) {
+        res.status(500).json({ success: false });
+    }
+});
+
+app.delete('/api/remote-servers/:id', (req, res) => {
+    try {
+        const { id } = req.params;
+        const db = getDB();
+        db.settings.remoteServers = (db.settings.remoteServers || []).filter(s => s.id.toString() !== id);
         saveDB(db);
         res.json({ success: true });
     } catch (e) {
@@ -641,9 +740,10 @@ app.delete('/api/games/:id', (req, res) => {
 
         db.games.splice(gameIdx, 1);
         saveDB(db);
-        res.json({ success: true, message: `Deleted ${gameName}` });
+        res.json({ success: true, message: `Deleted ${gameName} and all its data.` });
     } catch (e) {
-        res.status(500).json({ success: false, message: e.message });
+        console.error(`Failed to delete game ${req.params.id}:`, e.message);
+        res.status(500).json({ success: false, message: 'Internal server error during deletion.' });
     }
 });
 

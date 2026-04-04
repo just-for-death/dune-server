@@ -7,7 +7,7 @@ import path from 'path';
 function isSaveCandidate(dirPath) {
     try {
         const files = fs.readdirSync(dirPath, { withFileTypes: true });
-        const saveExts = ['.sav', '.bin', '.dat', '.json', '.xml', '.cfg', '.ini', '.txt', '.sl2', '.prof'];
+        const saveExts = ['.sav', '.bin', '.dat', '.json', '.xml', '.cfg', '.ini', '.txt', '.sl2', '.prof', '.sqlite', '.db', '.dat', '.rpgsave'];
         
         // Check for specific subdirectories often found in save folders
         const hasSaveDir = files.some(f => f.isDirectory() && (f.name.toLowerCase().includes('save') || f.name.toLowerCase() === 'profiles'));

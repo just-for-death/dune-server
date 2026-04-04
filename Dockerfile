@@ -1,7 +1,7 @@
 FROM node:20-alpine
 
 # Security: Upgrade Alpine packages to patch vulnerabilities
-RUN apk update && apk upgrade --no-cache && apk add --no-cache unzip
+RUN apk update && apk upgrade --no-cache && apk add --no-cache unzip zip
 
 WORKDIR /app
 

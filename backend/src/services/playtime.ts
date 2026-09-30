@@ -4,7 +4,7 @@ import { writeDB } from '../db/index.js';
 
 const PLAYTIME_DB = path.join(process.cwd(), 'data', 'playtime.json');
 
-interface PlaytimeSession {
+export interface PlaytimeSession {
   id: number;
   game: string;
   platform: string;
@@ -14,7 +14,7 @@ interface PlaytimeSession {
   createdAt: string;
 }
 
-interface PlaytimeSummary {
+export interface PlaytimeSummary {
   game: string;
   platform: string;
   totalMinutes: number;

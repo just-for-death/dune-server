@@ -3,7 +3,7 @@ import * as path from 'path';
 
 const ACHIEVEMENTS_DB = path.join(process.cwd(), 'data', 'achievements.json');
 
-interface Achievement {
+export interface Achievement {
   id: number;
   game: string;
   apiName: string;
@@ -151,7 +151,7 @@ export function handleSentinelWebhook(
     displayName: string;
     description?: string;
     unlocked: boolean;
-    unlockTime?: string;
+    unlockTime?: string | null;
     rarity?: number;
     hidden?: boolean;
   }>

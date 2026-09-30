@@ -1,0 +1,54 @@
+services:
+  dune-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dune-server
+    restart: unless-stopped
+    ports:
+      - "3023:3030"
+    environment:
+      - NODE_ENV=production
+      - PORT=3030
+      # Add your SteamGridDB key via .env file
+      # - STEAMGRIDDB_API_KEY=${STEAMGRIDDB_API_KEY}
+    volumes:
+      - ./data:/app/backend/data
+    depends_on:
+      ollama:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3030/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - dune-net
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: dune-ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - dune-net
+    # Uncomment for GPU support:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+volumes:
+  ollama-data:
+    driver: local
+
+networks:
+  dune-net:
+    driver: bridge
